@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="task-container">
+    <!-- Added header container to position title and theme toggle -->
+    <div class="header-container">
+      <h1>📝 Task Manager</h1>
+      <button id="theme-toggle">🌙 Dark Mode</button> 
+    </div>
+
+    <div class="search-bar">
+      <span class="search-logo">🔍</span>
+      <input type="text" id="search-input" placeholder="Search tasks...">
+    </div>
+
+    <form class="task-form">
+      <input type="text" id="task-title" placeholder="Task Title" required>
+      <textarea id="task-description" placeholder="Task Description"></textarea>
+      <input type="date" id="task-dueDate">
+      <button type="button" id="add-task-btn">➕ Add Task</button>
+    </form>
+
+    <div class="task-filter">
+      <button class="active">All</button>
+      <button>Pending</button>
+      <button>Completed</button>
+    </div>
+
+    <div class="task-lists">
+      <div class="task-list" id="pending-tasks">
+        <h2>📋 Pending Tasks</h2>
+        <!-- Pending tasks will be dynamically inserted here -->
+      </div>
+      <div class="task-list" id="completed-tasks">
+        <h2>✅ Completed Tasks</h2>
+        <!-- Completed tasks will be dynamically inserted here -->
+      </div>
+    </div>
+
+    <div id="toast"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
